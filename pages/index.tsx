@@ -7,11 +7,21 @@ export default function Home() {
       <h1 className="logo_text">Karaoke Cat</h1>
     </header>
     <div className="container my-4">
-      {/* <nav className="nav justify-content-center my-3">
-        <a href="#about" className="nav-link">About</a>
-        <a href="#services" className="nav-link">Services</a>
-        <a href="#contact" className="nav-link">Contact</a>
-      </nav> */}
+    <div className="row justify-content-center">
+    <div className="col-2 d-flex justify-content-center">
+        <a href="https://twitter.com/karaokecatonsol" className="btn btn-warning">Twitter</a>
+    </div>
+
+    <div className="col-2 d-flex justify-content-center">
+        <a href="https://twitter.com/karaokat" className="btn btn-warning">Telegram</a>
+    </div>
+    
+    <div className="col-2 d-flex justify-content-center">
+        <a href="https://pump.fun/AMN14Xtr92ubvoJpYyVU49j3hxgGKeja373jWa4LN5Z8" className="btn btn-warning">Pump</a>
+    </div>
+</div>
+      
+      
       <main>
           
           <section>
