@@ -107,7 +107,7 @@ export default function Home() {
                       <div className="timeline-badge"></div>
                       <div className="timeline-panel theme-box">
                         <div className="timeline-heading">
-                          <h4 className="timeline-title">Chef Tony's Seafood & Jazz</h4>
+                          <h4 className="timeline-title">Chef Tony Seafood & Jazz</h4>
                           <p><small className="text-muted"><i className="glyphicon glyphicon-time"></i> 5/1/2024</small></p>
                           <Image 
                             src="/cat_5.webp"
