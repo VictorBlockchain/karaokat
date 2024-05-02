@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+/* General body styles with a soft UI effect */
+body {
+    background-color: #ffffff; /* Clean white background */
+    color: #424242; /* Soft color for text */
+    font-family: 'Poppins', sans-serif; /* Modern, rounded typography */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body, h1, h2, nav, footer {
+    font-family: 'Quicksand', sans-serif; /* Setting Quicksand as the font for the entire site */
+  }
+  
+  .headers {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Enhancing the curvature at the corners */
+  .headers::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px; /* Adjust this value for more or less pronounced curvature */
+    background: inherit;
+    border-radius: 0 80% 80% 80% / 40%; /* Adjusted to create a more pronounced curve */
+    transform: translateY(50%); /* Adjusting the transform to position the curve correctly */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  
+  .logo_text {
+    color: #fff; /* White text color */
+    font-size: 3em; /* Large text size for prominence */
+    letter-spacing: -1px; /* Tightens the letter spacing for a neat appearance */
+    line-height: 1.2; /* Adjusts line height for better readability */
+    text-shadow: 
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000; /* Creates a black border effect */
+  }
+  
+  .logo-header {
+    max-width: 350px; /* Controls the maximum width of the logo */
+  }
+
+  /* Navigation with interactive cat paw buttons */
+  nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: transparent; /* No background for a clean look */
+    margin-top: -40px; /* Positioning just below the curved header */
+  }
+  
+  nav a {
+    color: #ffffff;
+    background-color: #7bed9f; /* Soft mint color */
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 50%; /* Circle shaped buttons */
+    margin: 0 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    position: relative;
+  }
+  
+  nav a:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Adding paw print effect to navigation buttons */
+  nav a::before, nav a::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    bottom: 10px;
+  }
+  
+  nav a::before {
+    left: 10px;
+  }
+  
+  nav a::after {
+    right: 10px;
+  }
+  
+  /* Main content with soft shadows and rounded corners */
+  main {
+    padding: 40px 20px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+  }
+  
+  /* Central line */
+  .timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #333;
+  }
+  
+  .timeline > li {
+    position: relative;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  
+  .timeline > li .timeline-panel {
+    position: relative;
+    width: 46%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 54%;
+  }
+  
+  .timeline > li .timeline-badge {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6fbded;
+    border-radius: 50%;
+    z-index: 100;
+  }
+  
+  .timeline > li.timeline-inverted .timeline-panel {
+    margin-left: 0;
+  }
+  
+  /* Arrows pointing to the line */
+  .timeline > li > .timeline-panel:before {
+    position: absolute;
+    top: 20px;
+    right: -15px;
+    content: ' ';
+    display: inline-block;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #fff transparent transparent;
+  }
+  
+  .timeline > li.timeline-inverted > .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-color: transparent transparent transparent #fff;
+  }
+  
+  
+  
+  
+  .theme-box {
+    background: linear-gradient(45deg, #f6d365, #fda085); /* Vibrant gradient background */
+    border-radius: 15px 50px 30px 5px; /* Varied border-radius for an obtuse, organic shape */
+    color: white; /* Text color for better contrast */
+    margin-top: 20px; /* Spacing from any content above */
+    padding: 20px; /* Adequate padding for content */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    transition: transform 0.3s ease-in-out; /* Smooth transform on hover */
+  }
+  
+  .theme-box:hover {
+    transform: scale(1.05); /* Slight scale up on hover for interactivity */
+  }
+  .theme-box2 {
+    background: linear-gradient(45deg, #56ccf2, #2f80ed); /* Cool blue gradient background */
+    border-radius: 15px 50px 30px 5px; /* Varied border-radius for an obtuse, organic shape */
+    color: white; /* Text color for better contrast */
+    margin-top: 20px; /* Spacing from any content above */
+    padding: 20px; /* Adequate padding for content */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    transition: transform 0.3s ease-in-out; /* Smooth transform on hover */
+  }
+  .theme-box2:hover {
+    transform: scale(1.05); /* Slight scale up on hover for interactivity */
+  }
+  
+  footer {
+    background-color: #ff6b81; /* Vibrant footer color */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensure elements like pseudo-elements don't spill out */
+  }
+  /* Custom style for tilted footer */
+.tilted-footer {
+    transform: rotate(-3deg); /* Tilts the footer */
+    transform-origin: center; /* Ensures rotation around the center */
+    background-color: #ff6b81; /* Dark background */
+    color: #fff; /* White text */
+    margin-top: 50px; /* Adds top margin to avoid overlap */
+    overflow: hidden; /* Hides anything outside the boundaries */
+    width: 100vw; /* Ensures full viewport width */
+    position: relative; /* Needed for correct positioning */
+    left: 50%; /* Centers the footer */
+    right: 50%;
+    margin-left: -50vw; /* Aligns the center of the footer with the center of the viewport */
+    margin-right: -50vw;
+    text-align: center; /* Centers the text inside the footer */
+  }
+  
+  /* Adjusting the container inside the tilted footer */
+
+  
+  /* Adding a pseudo-element to create the tilted wave effect */
+
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2em;
+    }
+  
+    nav a {
+      padding: 8px 20px;
+      margin: 0 5px;
+      font-size: 0.9em;
+    }
+  
+    main {
+      padding: 20px;
+    }
+  
+    footer::after {
+      top: -20px;
+      width: 100px;
+      height: 50px;
+    }
+  }
+  
